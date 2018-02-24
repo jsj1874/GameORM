@@ -1,0 +1,18 @@
+<?xml version="1.0"?>  
+<!DOCTYPE hibernate-mapping PUBLIC   
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">  
+<hibernate-mapping>  
+    <class name="com.bean.User" >  
+        <!--hibernate为我们生成主键id-->  
+        <id name="id">  
+            <generator class="uuid" />  
+        </id>  
+          
+        <!--默认把类的变量映射为相同名字的表列，当然我们使用column属性修改表字段-->  
+        <property name="name" column="name"></property>  
+        <property name="password"></property>  
+        <property name="createTime"></property>  
+        <property name="expireTime"></property>  
+    </class>  
+</hibernate-mapping> 
